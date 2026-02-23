@@ -1,0 +1,8 @@
+@use '../../tokens/src/tokens.scss' as *;
+
+// Bootstrap import is intentionally isolated in theme lib.
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+  font-family: var(--ds-font-family-base);
+}

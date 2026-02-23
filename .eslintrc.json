@@ -1,0 +1,88 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "extends": [
+        "plugin:@nx/typescript"
+      ],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib"
+                ]
+              },
+              {
+                "sourceTag": "scope:components",
+                "onlyDependOnLibsWithTags": [
+                  "scope:tokens",
+                  "scope:theme",
+                  "scope:primitives"
+                ]
+              },
+              {
+                "sourceTag": "scope:data",
+                "onlyDependOnLibsWithTags": [
+                  "scope:adapters-primeng"
+                ]
+              },
+              {
+                "sourceTag": "scope:theme",
+                "notDependOnLibsWithTags": [
+                  "scope:bootstrap-forbidden"
+                ]
+              }
+            ],
+            "banTransitiveDependencies": true
+          }
+        ],
+        "no-restricted-imports": [
+          "error",
+          {
+            "paths": [
+              {
+                "name": "primeng",
+                "message": "PrimeNG imports are allowed only in libs/adapters/primeng."
+              },
+              {
+                "name": "bootstrap",
+                "message": "Bootstrap direct imports are allowed only in libs/theme."
+              }
+            ],
+            "patterns": [
+              {
+                "group": [
+                  "primeng/*"
+                ],
+                "message": "PrimeNG imports are allowed only in libs/adapters/primeng."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "libs/adapters/primeng/**/*.ts"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ]
+}

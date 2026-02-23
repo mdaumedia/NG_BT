@@ -1,0 +1,19 @@
+{
+  "name": "ng-bt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Angular Design System platform in Nx monorepo",
+  "scripts": {
+    "lint": "echo 'TODO: wire nx lint'",
+    "test": "echo 'TODO: wire nx test'",
+    "build": "echo 'TODO: wire nx build'",
+    "tokens:build": "node tools/token-compiler/index.mjs",
+    "tokens:validate": "node tools/token-compiler/index.mjs --validate-only",
+    "figma:export": "node tools/figma-export/index.mjs",
+    "codemod:bootstrap-button": "node tools/codemods/bootstrap-button-to-ds-button.mjs",
+    "vr:test": "node tools/visual-regression/run-snapshots.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

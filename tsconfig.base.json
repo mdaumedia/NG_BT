@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "declaration": false,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ng-bt/tokens": ["libs/tokens/src/index.ts"],
+      "@ng-bt/theme": ["libs/theme/src/index.ts"],
+      "@ng-bt/primitives": ["libs/primitives/src/index.ts"],
+      "@ng-bt/components": ["libs/components/src/index.ts"],
+      "@ng-bt/patterns": ["libs/patterns/src/index.ts"],
+      "@ng-bt/data": ["libs/data/src/index.ts"],
+      "@ng-bt/adapters-primeng": ["libs/adapters/primeng/src/index.ts"],
+      "@ng-bt/metadata": ["libs/metadata/src/index.ts"]
+    }
+  }
+}

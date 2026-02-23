@@ -1,0 +1,10 @@
+.ds-btn {
+  border-radius: var(--ds-radius-md);
+  padding: var(--ds-spacing-sm) var(--ds-spacing-md);
+  font-weight: var(--ds-font-weight-semibold);
+}
+.ds-btn--primary { background-color: var(--ds-color-primary); }
+.ds-btn--secondary { background-color: var(--ds-color-secondary); }
+.ds-btn--success { background-color: var(--ds-color-success); }
+.ds-btn--warning { background-color: var(--ds-color-warning); color: #000; }
+.ds-btn--danger { background-color: var(--ds-color-danger); }

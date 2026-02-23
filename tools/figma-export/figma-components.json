@@ -1,0 +1,148 @@
+[
+  {
+    "name": "DsAlert",
+    "category": "components",
+    "tokensUsed": [
+      "color.success",
+      "color.warning",
+      "color.danger",
+      "radius.sm"
+    ],
+    "variants": [
+      "success",
+      "warning",
+      "danger"
+    ],
+    "states": [
+      "default"
+    ],
+    "props": [
+      {
+        "name": "variant",
+        "type": "DsAlertVariant"
+      },
+      {
+        "name": "message",
+        "type": "string"
+      }
+    ],
+    "figmaExport": true,
+    "storybookUrl": "https://storybook.example.com/?path=/story/design-system-dsalert"
+  },
+  {
+    "name": "DsButton",
+    "category": "components",
+    "tokensUsed": [
+      "color.primary",
+      "spacing.md",
+      "radius.md"
+    ],
+    "variants": [
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger"
+    ],
+    "states": [
+      "default",
+      "hover",
+      "focus",
+      "disabled"
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "variant",
+        "type": "DsButtonVariant"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean"
+      }
+    ],
+    "figmaExport": true,
+    "storybookUrl": "https://storybook.example.com/?path=/story/design-system-dsbutton"
+  },
+  {
+    "name": "DsCard",
+    "category": "components",
+    "tokensUsed": [
+      "radius.md",
+      "elevation.sm"
+    ],
+    "variants": [
+      "default"
+    ],
+    "states": [
+      "default"
+    ],
+    "props": [
+      {
+        "name": "heading",
+        "type": "string"
+      }
+    ],
+    "figmaExport": true,
+    "storybookUrl": "https://storybook.example.com/?path=/story/design-system-dscard"
+  },
+  {
+    "name": "DsInput",
+    "category": "components",
+    "tokensUsed": [
+      "radius.sm",
+      "spacing.sm",
+      "color.primary"
+    ],
+    "variants": [
+      "default"
+    ],
+    "states": [
+      "default",
+      "focus",
+      "disabled"
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "required",
+        "type": "boolean"
+      }
+    ],
+    "figmaExport": true,
+    "storybookUrl": "https://storybook.example.com/?path=/story/design-system-dsinput"
+  },
+  {
+    "name": "DsModal",
+    "category": "components",
+    "tokensUsed": [
+      "radius.lg",
+      "elevation.lg"
+    ],
+    "variants": [
+      "default"
+    ],
+    "states": [
+      "open",
+      "closed"
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "open",
+        "type": "boolean"
+      }
+    ],
+    "figmaExport": true,
+    "storybookUrl": "https://storybook.example.com/?path=/story/design-system-dsmodal"
+  }
+]
