@@ -28,6 +28,17 @@ import {
       </section>
 
       <section>
+        <h2 class="h5">UI options in this demo</h2>
+        <ul class="mb-0">
+          <li><strong>Button variants:</strong> primary, secondary, success, warning, danger</li>
+          <li><strong>Input options:</strong> label, placeholder, required state</li>
+          <li><strong>Alert variants:</strong> success, warning, danger</li>
+          <li><strong>Card:</strong> heading with projected content</li>
+          <li><strong>Modal:</strong> open state toggle with title and body content</li>
+        </ul>
+      </section>
+
+      <section>
         <h2 class="h5">Form controls</h2>
         <div class="d-grid gap-3" style="max-width: 420px;">
           <ds-input label="Email" placeholder="name@example.com" [required]="true"></ds-input>
