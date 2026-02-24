@@ -1,0 +1,11 @@
+<p-table [value]="rows" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr><th *ngFor="let col of columns">{{ col.header }}</th></tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-row>
+    <tr><td *ngFor="let col of columns">{{ row[col.key] }}</td></tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr><td [attr.colspan]="columns.length">{{ emptyStateLabel }}</td></tr>
+  </ng-template>
+</p-table>

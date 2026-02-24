@@ -1,0 +1,53 @@
+trigger:
+  branches:
+    include:
+      - main
+pr:
+  branches:
+    include:
+      - '*'
+
+stages:
+  - stage: PR_Validation
+    condition: ne(variables['Build.SourceBranch'], 'refs/heads/main')
+    jobs:
+      - job: validate
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '20.x'
+          - script: npm ci
+            displayName: npm install
+          - script: npm run lint
+            displayName: lint
+          - script: npm run test
+            displayName: test
+          - script: npx nx affected --target=build
+            displayName: build affected
+          - script: npm run tokens:validate
+            displayName: run token validation
+
+  - stage: Main_Release
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+    jobs:
+      - job: release
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '20.x'
+          - script: npm ci
+            displayName: npm install
+          - script: npx semantic-release
+            displayName: semantic version bump
+          - script: npx nx run-many --target=build --projects=tokens,theme,primitives,components,patterns,data,adapters-primeng,metadata
+            displayName: build libs
+          - script: npx nx build docs
+            displayName: deploy docs artifact
+          - script: npm run figma:export
+            displayName: generate figma-export artifact
+          - publish: tools/figma-export
+            artifact: figma-export

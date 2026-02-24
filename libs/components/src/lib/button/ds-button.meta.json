@@ -1,0 +1,13 @@
+{
+  "name": "DsButton",
+  "category": "components",
+  "tokensUsed": ["color.primary", "spacing.md", "radius.md"],
+  "variants": ["primary", "secondary", "success", "warning", "danger"],
+  "states": ["default", "hover", "focus", "disabled"],
+  "props": [
+    { "name": "label", "type": "string" },
+    { "name": "variant", "type": "DsButtonVariant" },
+    { "name": "disabled", "type": "boolean" }
+  ],
+  "figmaExport": true
+}

@@ -1,0 +1,1 @@
+{"name":"DsModal","category":"components","tokensUsed":["radius.lg","elevation.lg"],"variants":["default"],"states":["open","closed"],"props":[{"name":"title","type":"string"},{"name":"open","type":"boolean"}],"figmaExport":true}

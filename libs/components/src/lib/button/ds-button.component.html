@@ -1,0 +1,10 @@
+<button
+  class="btn text-white"
+  [class]="'btn text-white ds-btn ds-btn--' + variant"
+  [attr.aria-disabled]="disabled"
+  [disabled]="disabled"
+  [type]="type"
+  (click)="pressed.emit($event)"
+>
+  {{ label }}
+</button>

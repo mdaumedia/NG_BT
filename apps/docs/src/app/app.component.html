@@ -1,0 +1,23 @@
+<main class="container py-4">
+  <h1>NG BT Design System Docs</h1>
+  <section>
+    <h2>Component catalog</h2>
+    <ul><li *ngFor="let item of componentCatalog">{{ item }}</li></ul>
+  </section>
+  <section>
+    <h2>Live playground</h2>
+    <ds-button label="Preview Button" variant="primary"></ds-button>
+    <ds-input label="Preview Input" placeholder="Type here"></ds-input>
+    <ds-alert message="Accessibility checks enabled" variant="success"></ds-alert>
+  </section>
+  <section>
+    <h2>Token reference</h2>
+    <p>Rendered from <code>tokens.json</code>.</p>
+    <h2>Theming preview</h2>
+    <p>Toggle <code>data-theme=dark</code> at root to preview dark mode.</p>
+  </section>
+  <section>
+    <h2>Accessibility checklist</h2>
+    <ul><li *ngFor="let item of accessibilityChecklist">{{ item }}</li></ul>
+  </section>
+</main>

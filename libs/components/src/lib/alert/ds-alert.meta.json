@@ -1,0 +1,1 @@
+{"name":"DsAlert","category":"components","tokensUsed":["color.success","color.warning","color.danger","radius.sm"],"variants":["success","warning","danger"],"states":["default"],"props":[{"name":"variant","type":"DsAlertVariant"},{"name":"message","type":"string"}],"figmaExport":true}

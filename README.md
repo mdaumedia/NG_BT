@@ -1,2 +1,3 @@
 # NG_BT
-Testing the NG Bootstrap UI env.
+
+Production-grade Angular design system scaffold in an Nx-style monorepo.

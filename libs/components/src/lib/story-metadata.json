@@ -1,0 +1,9 @@
+{
+  "components": [
+    {"name":"DsButton","story":"Design System/DsButton","variants":["primary","secondary","success","warning","danger"],"states":["default","hover","disabled"]},
+    {"name":"DsInput","story":"Design System/DsInput","variants":["default"],"states":["default","focus"]},
+    {"name":"DsModal","story":"Design System/DsModal","variants":["default"],"states":["open","closed"]},
+    {"name":"DsCard","story":"Design System/DsCard","variants":["default"],"states":["default"]},
+    {"name":"DsAlert","story":"Design System/DsAlert","variants":["success","warning","danger"],"states":["default"]}
+  ]
+}

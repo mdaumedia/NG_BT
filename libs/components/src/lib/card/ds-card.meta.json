@@ -1,0 +1,1 @@
+{"name":"DsCard","category":"components","tokensUsed":["radius.md","elevation.sm"],"variants":["default"],"states":["default"],"props":[{"name":"heading","type":"string"}],"figmaExport":true}

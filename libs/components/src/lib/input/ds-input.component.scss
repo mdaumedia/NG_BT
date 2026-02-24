@@ -1,0 +1,2 @@
+.ds-input { border-radius: var(--ds-radius-sm); padding: var(--ds-spacing-sm); }
+.ds-input:focus { box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--ds-color-primary) 25%, white); }
